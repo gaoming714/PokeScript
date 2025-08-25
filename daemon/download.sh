@@ -1,0 +1,1 @@
+uv run blender2.py

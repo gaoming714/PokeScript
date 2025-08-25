@@ -1,0 +1,1 @@
+uv run blender6.py
