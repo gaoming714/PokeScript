@@ -5,7 +5,7 @@ from pathlib import Path
 import pandas as pd
 from flask_socketio import SocketIO, emit
 
-app = Flask(__name__, template_folder='dist')
+app = Flask(__name__)
 # socketio = SocketIO(app, cors_allowed_origins="http://127.0.0.1:8000")
 
 # SQLite 数据库文件路径
