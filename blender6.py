@@ -13,7 +13,7 @@ DATABASE = 'db.sqlite3'  # 请替换为你的数据库文件路径
 
 delay = {"510300": 0, "510500": 0}
 
-DIST_DIR = Path.cwd() / 'dist'
+DIST_DIR = Path.cwd() / 'templates'
 
 @app.route('/')
 def serve_index():

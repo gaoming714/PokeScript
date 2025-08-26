@@ -21,31 +21,31 @@ const vuetify = createVuetify({
 
 createApp(App).use(naive).use(vuetify).mount('#app')
 
-import { io } from "socket.io-client";
+// import { io } from "socket.io-client";
 
-const state = reactive({
-  connected: false,
-  fooEvents: [],
-  barEvents: []
-});
+// const state = reactive({
+//   connected: false,
+//   fooEvents: [],
+//   barEvents: []
+// });
 
 // "undefined" means the URL will be computed from the `window.location` object
-const URL = process.env.NODE_ENV === "production" ? undefined : "http://localhost:8000";
+// const URL = process.env.NODE_ENV === "production" ? undefined : "http://localhost:8000";
 
-const socket = io(URL);
+// const socket = io(URL);
 
-socket.on("connect", () => {
-  state.connected = true;
-});
+// socket.on("connect", () => {
+//   state.connected = true;
+// });
 
-socket.on("disconnect", () => {
-  state.connected = false;
-});
+// socket.on("disconnect", () => {
+//   state.connected = false;
+// });
 
-socket.on("foo", (...args) => {
-  state.fooEvents.push(args);
-});
+// socket.on("foo", (...args) => {
+//   state.fooEvents.push(args);
+// });
 
-socket.on("bar", (...args) => {
-  state.barEvents.push(args);
-});
+// socket.on("bar", (...args) => {
+//   state.barEvents.push(args);
+// });
