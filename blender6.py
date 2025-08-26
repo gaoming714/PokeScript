@@ -6,7 +6,7 @@ import pandas as pd
 from flask_socketio import SocketIO, emit
 
 app = Flask(__name__, template_folder='dist')
-socketio = SocketIO(app, cors_allowed_origins="http://127.0.0.1:8000")
+# socketio = SocketIO(app, cors_allowed_origins="http://127.0.0.1:8000")
 
 # SQLite 数据库文件路径
 DATABASE = 'db.sqlite3'  # 请替换为你的数据库文件路径
@@ -82,14 +82,14 @@ def notify():
     return "通知已处理", 200
 
 
-@socketio.on("connect")
-def handle_connect():
-    print("客户端已连接")
+# @socketio.on("connect")
+# def handle_connect():
+#     print("客户端已连接")
 
 
-@socketio.on("disconnect")
-def handle_disconnect():
-    print("客户端已断开")
+# @socketio.on("disconnect")
+# def handle_disconnect():
+#     print("客户端已断开")
 
 def load_db(tick):
     # tick = "2025-04-11 14:59:57"
@@ -183,7 +183,7 @@ def calc_500(df):
 
 def emit(data):
     if data:
-        socketio.emit("update_data", {"data": data}, namespace="/")
+        # socketio.emit("update_data", {"data": data}, namespace="/")
         print(f"收到通知，已推送数据: {data}")
         return "通知已处理", 200
     else:
@@ -196,5 +196,5 @@ def remain(now, hour, minute, second):
     return wait_time
 
 if __name__ == '__main__':
-    # app.run(debug=True)
-    socketio.run(app, host="127.0.0.1", port=5000, debug=True)
+    app.run(debug=True, host="127.0.0.1", port=8000, debug=True)
+    # socketio.run(app, host="127.0.0.1", port=5000, debug=True)

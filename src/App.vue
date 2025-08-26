@@ -1,7 +1,7 @@
 <script setup>
 // import HelloWorld from './components/HelloWorld.vue'
 // import TheWelcome from './components/TheWelcome.vue'
-import Page from './components/Page.vue'
+// import Page from './components/Page.vue'
 import Plot from './components/Plot.vue'
 import Plot2 from './components/Plot2.vue'
 // import Plot3 from './components/Plot3.vue'
@@ -19,7 +19,7 @@ import Plot2 from './components/Plot2.vue'
 
   <main>
     <!-- <TheWelcome /> -->
-    <n-loading-bar-provider>
+    <!-- <n-loading-bar-provider>
       <n-message-provider>
         <n-notification-provider>
           <n-modal-provider>
@@ -29,7 +29,7 @@ import Plot2 from './components/Plot2.vue'
           </n-modal-provider>
         </n-notification-provider>
       </n-message-provider>
-    </n-loading-bar-provider>
+    </n-loading-bar-provider> -->
 
     <Plot />
     <Plot2 />
